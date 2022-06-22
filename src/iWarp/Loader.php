@@ -8,7 +8,7 @@ use pocketmine\ {
  player\Player,
  Plugin\plugin,
  Plugin\pluginbase,
- Utils\TextFormat as C,
+ utils\TextFormat as C,
 };
 
 class Loader extends pluginbase {

@@ -60,5 +60,9 @@ class Loader extends pluginbase {
  public function getConfig() {
   return $this->getConfig();
  }
+ 
+ public function getDataFolder() {
+  return $this->getDataFolder();
+ }
 
 }

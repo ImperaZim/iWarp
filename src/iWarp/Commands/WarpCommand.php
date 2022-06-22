@@ -31,7 +31,7 @@ class WarpCommand extends Command {
 
   $plugin = $this->pl;
   $player = $plugin->getServer()->getPlayerExact($player->getName());
-  $config = new utils\Config($plugin->getDataFolder() . "warps.yml");
+  $config = new Config($plugin->getDataFolder() . "warps.yml");
   $warps = $config->getAll();
 
   $message = $plugin->getConfig();

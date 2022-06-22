@@ -3,12 +3,10 @@
 namespace iWarp\Eventos\WarpEvents;
 
 use iWarp\Loader;
-use pocketmine\Utils\Config;
+use pocketmine\utils\Config;
 use pocketmine\world\Position;
 
 class WarpTeleport {
-
- private $warp;
 
  public function __construct($player, $warp) {
   $plugin = Loader::getInstance();

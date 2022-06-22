@@ -19,6 +19,8 @@ use pocketmine\{
 };
 
 class WarpCommand extends Command {
+ 
+ private $plugin;
 
  public function __construct($main) {
   $this->plugin = $main;

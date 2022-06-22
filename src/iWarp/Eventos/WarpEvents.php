@@ -3,7 +3,7 @@
 namespace iWarp\Eventos;
 
 use iWarp\Loader;
-use pocketmine\Utils\Config;
+use pocketmine\utils\Config;
 
 use iWarp\Eventos\WarpEvents\{
  WarpTeleport,

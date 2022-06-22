@@ -4,7 +4,7 @@ namespace iWarp;
 
 use pocketmine\ {
  Server,
- Utils\Config,
+ utils\Config,
  player\Player,
  plugin\Plugin,
  Plugin\PluginBase,

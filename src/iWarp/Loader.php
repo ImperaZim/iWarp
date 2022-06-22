@@ -39,7 +39,7 @@ class Loader extends pluginbase {
  }
  
  public function getWarpEvents() {
-  return new Eventos\WarpEvents();
+  new Config($this->getDataFolder() . "warps.yml"); 
  }
  
  public function getProcessedTags($message, $warp = null) {

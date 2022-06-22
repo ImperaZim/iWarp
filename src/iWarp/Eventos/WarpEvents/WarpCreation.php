@@ -7,11 +7,11 @@ use pocketmine\utils\Config;
 
 class WarpCreation {
 
- private $warp,
- $path,
- $world,
- $position,
- $permission;
+ private $warp;
+ private $path;
+ private $world;
+ private $position;
+ private $permission;
 
  public function __construct($player, $warp, $world, $position, $permission, $path) {
   $plugin = Loader::getInstance();

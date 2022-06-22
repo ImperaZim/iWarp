@@ -1,0 +1,32 @@
+
+
+# MESSAGE PREFIX 
+plugin.prefix: "§l§bWARP§r"
+
+# USAGE PERMISSION
+command.permission: "warp.op"
+command.nopermission: "{prefix} §7Você não tem permissão para usar este comando!"
+
+# COMMAND WARP SET
+command.set.help: "{prefix} §7Use /warp set {name} {permission = optional}"
+command.set.haswarp: "\n{prefix} §7A warp §b{warp}§r já existe!\n"
+command.set.sucess: "\n{prefix} §7Warp §b{warp}§r §7criada com sucesso!\n §a"
+
+# COMMAND WARP DEL
+command.del.help: "{prefix} §7Use /warp del {name}"
+command.del.nowarp: "\n{prefix} §7A warp §b{warp}§r §7não existe!\n"
+command.del.sucess: "\n{prefix}§7 A warp §b{warp}§r§7 foi deletada com sucesso!\n §a"
+
+# COMMAND WARP LIST 
+command.list.warps: "{prefix} §7Lista de warps: {warps}"
+command.list.nowarps: "{prefix} §7Lista de warps vazia!"
+
+# COMMAND WARP TP
+command.teleport.help: "{prefix}§7 Use /warp tp (name)"
+command.teleport.sucess: "{prefix}§7 Teleportado para warp §b{warp}§r§7 com sucesso!"
+command.teleport.nopermission: "{prefix} §7Você não tem permissão para teleportar para warp §b{warp}§r"
+command.teleport.unknow: "{prefix}§7 Me parece que a warp §b{warp}§r §não existe!"
+
+# COMMAND WARP HELP 
+command.help.op: "{prefix} §7Use /warp (tp, set, delete, list)"
+command.help.player: "{prefix} §7Use /warp (tp, list)"

@@ -6,12 +6,12 @@ use pocketmine\ {
  Server,
  Utils\Config,
  player\Player,
- Plugin\plugin,
- Plugin\pluginbase,
+ plugin\Plugin,
+ Plugin\PluginBase,
  utils\TextFormat as C,
 };
 
-class Loader extends pluginbase {
+class Loader extends PluginBase {
 
  public static $instance = null;
 

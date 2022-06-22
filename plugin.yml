@@ -1,6 +1,6 @@
 name: iWarp
 author: ImperaZim
-version: 1.1.0
+version: 1.1.1
 
 api: [4.0.0]
 main: iWarp\Loader

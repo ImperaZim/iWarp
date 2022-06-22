@@ -29,7 +29,7 @@ class WarpCommand extends Command {
 
  public function execute(CommandSender $player, string $commandLabel, array $args) : bool {
 
-  $plugin = Loader::getInstance();
+  $plugin = $this->pl;
   $player = $plugin->getServer()->getPlayerExact($player->getName());
   $config = new Config($plugin->getDataFolder() . "warps.yml");
   $warps = $config->getAll(); 

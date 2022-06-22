@@ -35,7 +35,7 @@ class Loader extends pluginbase {
  
  public function registerCommands() {
   $map = $this->getServer()->getCommandMap();
-		$map->register("warp", new Commands\WarpCommand());   
+		$map->register("warp", new Commands\WarpCommand($this));   
  }
  
  public function getWarpEvents() {

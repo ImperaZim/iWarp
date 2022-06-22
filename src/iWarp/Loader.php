@@ -7,7 +7,7 @@ use pocketmine\ {
  utils\Config,
  player\Player,
  plugin\Plugin,
- Plugin\PluginBase,
+ plugin\PluginBase,
  utils\TextFormat as C,
 };
 
@@ -25,12 +25,12 @@ class Loader extends PluginBase {
   $this->getWarpEvents();
   $this->registerCommands();
   $this->getConfig()->get("command.permission");
-  $this->getLogger()->info(C::GREEN . "Plugin iWarp ativado!");
+  $this->getServer()->getLogger()->info(C::GREEN . "Plugin iWarp ativado!");
  }
 
  public function onDisable() : void {
   self::$instance = $this;
-  $this->getLogger()->info(C::GREEN . "Plugin iWarp desativado!");
+  $this->getServer()->getLogger()->info(C::GREEN . "Plugin iWarp desativado!");
  }
  
  public function registerCommands() {

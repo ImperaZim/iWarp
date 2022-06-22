@@ -4,20 +4,25 @@ namespace iWarp\Commands;
 
 use iWarp\Loader;
 
-use pocketmine\ {
- Utils\Config, 
- player\Player,
- command\Command,
- command\CommandSender,
- command\PluginCommand,
- Utils\TextFormat as C,
+use pocketmine\plugin\{
+ Plugin, 
+ PluginOwned
+};
+use pocketmine\command\{
+  Command,
+  PluginCommand,
+  CommandSender
+}; 
+use pocketmine\{
+ utils\Config,
+ player\Player, 
 };
 
 class WarpCommand extends Command {
  
- private $main;
+ private $plugin;
 
- public function __construct($main) {
+ public function __construct($plugin) {
   parent::__construct("warp", "§7Warp's menu!");
  }
 

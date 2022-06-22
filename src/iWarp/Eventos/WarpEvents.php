@@ -14,11 +14,7 @@ use iWarp\Eventos\WarpEvents\{
 
 class WarpEvents {
  
- public function __construct() {
-  $plugin = Loader::getInstance(); 
-  $config = new Config($plugin->getDataFolder() . "warps.yml"); 
-  return $config;
-  }
+ public function __construct() { }
  
  public function create($player, $warp, $world, $position, $permission = null, $path = "") {
   return new WarpCreation($player, $warp, $world, $position, $permission, $path);

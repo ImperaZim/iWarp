@@ -19,8 +19,6 @@ use pocketmine\{
 };
 
 class WarpCommand extends Command {
- 
- private $plugin;
 
  public function __construct($plugin) {
   parent::__construct("warp", "§7Warp's menu!");

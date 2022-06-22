@@ -3,7 +3,7 @@
 namespace iWarp\Eventos\WarpEvents;
 
 use iWarp\Loader;
-use pocketmine\Utils\Config; 
+use pocketmine\utils\Config; 
 
 class WarpDelete {
  

@@ -21,11 +21,12 @@ class WarpCommand extends Command {
 
  public function execute(CommandSender $player, string $commandLabel, array $args) : bool {
 
-  $player = Loader::getInstance()->getServer()->getPlayerExact($player->getName());
-  $config = new Config(Loader::getInstance()->getDataFolder() . "warps.yml");
+  $plugin = Loader::getInstance();
+  $player = $plugin->getServer()->getPlayerExact($player->getName());
+  $config = new Config($plugin->getDataFolder() . "warps.yml");
   $warps = $config->getAll(); 
   
-  $message = Loader::getInstance()->getConfig();
+  $message = $plugin->getConfig();
   
   $permission = $message->get("command.permission");
   $permissiable = $message->get("command.permission");
@@ -37,7 +38,7 @@ class WarpCommand extends Command {
     if($permissiable == "default"){
      $permission = "true";
     }
-    if(Loader::getInstance()->getServer()->isOp($player->getName()) == true){
+    if($plugin->getServer()->isOp($player->getName()) == true){
      $permission = "true";
     }
    } 
@@ -47,7 +48,7 @@ class WarpCommand extends Command {
     switch ($args[0]) {
      case "tp": case "teleport": 
       if(isset($args[1])){
-       Loader::getInstance()->getWarpEvents()->teleport($player, $args[1]);
+       $plugin->getWarpEvents()->teleport($player, $args[1]);
       }else{
        $player->sendMessage($message->get("command.teleport.help")); #OK
       }
@@ -65,7 +66,7 @@ class WarpCommand extends Command {
        $z = (int)$player->getPosition()->getZ();
        $permission = null;
        if (isset($args[2])) $permission = $args[2];
-       Loader::getInstance()->getWarpEvents()->create($player, $warp, $world, [$x, $y, $z], $permission, "");
+       $plugin->getWarpEvents()->create($player, $warp, $world, [$x, $y, $z], $permission, "");
       } else {
        $player->sendMessage($message->get("command.set.help")); #OK
       }
@@ -77,24 +78,24 @@ class WarpCommand extends Command {
        }
        if (isset($args[1])) {
         $warp = $args[1];
-        Loader::getInstance()->getWarpEvents()->delete($player, $warp);
+        $plugin->getWarpEvents()->delete($player, $warp);
        } else {
         $player->sendMessage($message->get("command.del.help") ); #OK
        }
        break;
        case "list": case "lista":
-        Loader::getInstance()->getWarpEvents()->list($player);
+        $plugin->getWarpEvents()->list($player);
         break;
       }
     } else {
-     if($permission == "true" || Loader::getInstance()->getServer()->isOp($player->getName()) == true){
+     if($permission == "true" || $plugin->getServer()->isOp($player->getName()) == true){
       $player->sendMessage($message->get("command.help.op")); #OK
      }else{
       $player->sendMessage($message->get("command.help.player")); #OK
      }
     }
    } else {
-    Loader::getInstance()->getLogger()->warning("Esté comando só está disponivel no servidor!");
+    $plugin->getLogger()->warning("Esté comando só está disponivel no servidor!");
    }
    return true;
   }

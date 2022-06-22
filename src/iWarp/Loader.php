@@ -57,16 +57,6 @@ class Loader extends PluginBase {
   } $levels = $this->getServer()->getWorldManager()->getWorlds(); 
  }  
  
- public function getConfig() {
-  return $this->getConfig();
- }
  
- public function getDataFolder() {
-  return $this->getDataFolder();
- }
- 
- public function getServer() {
-  return $this->getServer();
- }
 
 }

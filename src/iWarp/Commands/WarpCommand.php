@@ -13,10 +13,8 @@ use pocketmine\command\ {
  PluginCommand,
  CommandSender
 };
-use pocketmine\ {
- utils\Config,
- player\Player,
-};
+use pocketmine\utils\Config; 
+use pocketmine\player\Player;
 
 class WarpCommand extends Command {
 

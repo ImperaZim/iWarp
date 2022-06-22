@@ -3,11 +3,9 @@
 namespace iWarp\Eventos\WarpEvents;
 
 use iWarp\Loader;
-use pocketmine\Utils\Config;
+use pocketmine\utils\Config;
 
 class WarpList {
- 
- private $user;
 
  public function __construct($user) {
   $player = $user;

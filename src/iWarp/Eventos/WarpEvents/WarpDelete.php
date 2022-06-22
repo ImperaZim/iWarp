@@ -7,8 +7,6 @@ use pocketmine\utils\Config;
 
 class WarpDelete {
  
- private $warp;
- 
  public function __construct($player, $warp) {
   $plugin = Loader::getInstance();
   $config = new Config($plugin->getDataFolder() . "warps.yml");

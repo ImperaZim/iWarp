@@ -14,7 +14,7 @@ use pocketmine\command\ {
  CommandSender
 };
 use pocketmine\ {
- Utils\Config,
+ utils\Config,
  player\Player,
 };
 
@@ -31,7 +31,7 @@ class WarpCommand extends Command {
 
   $plugin = $this->pl;
   $player = $plugin->getServer()->getPlayerExact($player->getName());
-  $config = new Config($plugin->getDataFolder() . "warps.yml");
+  $config = new utils\Config($plugin->getDataFolder() . "warps.yml");
   $warps = $config->getAll();
 
   $message = $plugin->getConfig();

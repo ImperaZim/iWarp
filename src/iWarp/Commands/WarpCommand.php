@@ -20,11 +20,11 @@ use pocketmine\{
 
 class WarpCommand extends Command {
  
- private $plugin;
+ private $pl;
 
  public function __construct($main) {
-  $this->plugin = $main;
   parent::__construct("warp", "§7Warp's menu!");
+  $this->pl = $main;
  }
 
  public function execute(CommandSender $player, string $commandLabel, array $args) : bool {

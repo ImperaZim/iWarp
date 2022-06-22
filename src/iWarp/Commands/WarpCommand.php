@@ -58,7 +58,7 @@ class WarpCommand extends Command {
       } else {
        $player->sendMessage($message->get("command.teleport.help")); #OK
       }
-      return true;
+      break;
       case "set": case "setar":
        if ($permission == "false") {
         $player->sendMessage($message->get("command.nopermission")); #OK
@@ -76,7 +76,7 @@ class WarpCommand extends Command {
        } else {
         $player->sendMessage($message->get("command.set.help")); #OK
        }
-       return true;
+       break;
        case "del": case "delete":
         if ($permission == "false") {
          $player->sendMessage($message->get("command.nopermission")); #OK
@@ -88,13 +88,10 @@ class WarpCommand extends Command {
         } else {
          $player->sendMessage($message->get("command.del.help")); #OK
         }
-        return true;
+        break;
         case "list": case "lista":
          $plugin->getWarpEvents()->list($player);
-         return true;
-         default:
-         $player->sendMessage("§l§bWARP§r §7Subcomando §b{$args[0]}§r§7 não existe!");
-          break; 
+         break;
        }
      } else {
       if ($permission == "true" || $plugin->getServer()->isOp($player->getName()) == true) {

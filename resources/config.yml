@@ -12,7 +12,7 @@ command.set.help: "{prefix} §7Use /warp set {name} {permission = optional}"
 command.set.haswarp: "\n{prefix} §7A warp §b{warp}§r já existe!\n"
 command.set.sucess: "\n{prefix} §7Warp §b{warp}§r §7criada com sucesso!\n §a"
 
-# COMMAND WARP DEL
+# COMMAND WARP DELETE
 command.del.help: "{prefix} §7Use /warp del {name}"
 command.del.nowarp: "\n{prefix} §7A warp §b{warp}§r §7não existe!\n"
 command.del.sucess: "\n{prefix}§7 A warp §b{warp}§r§7 foi deletada com sucesso!\n §a"

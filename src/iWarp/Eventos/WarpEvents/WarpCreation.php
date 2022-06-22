@@ -7,12 +7,6 @@ use pocketmine\utils\Config;
 
 class WarpCreation {
 
- private $warp;
- private $path;
- private $world;
- private $position;
- private $permission;
-
  public function __construct($player, $warp, $world, $position, $permission, $path) {
   $plugin = Loader::getInstance();
   $config = new Config($plugin->getDataFolder() . "warps.yml");
